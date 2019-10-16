@@ -12,26 +12,60 @@ var applesDict: [String: Int] = ["Adam": 3,
 
 // a. Set eveAppleCount equal to the number of apples that Eve has
 
-let eveAppleCount: Int = /*Your code here (Replace -1 with your solution)*/ -1
-//assert(eveAppleCount == 4, "Was expecting 4, but got \(eveAppleCount)")
+
+
+var eveAppleCount:Int = 0
+
+for _ in applesDict {
+    
+    eveAppleCount = applesDict["Eve"] ?? 0
+    
+}
+let evesApples = Int(eveAppleCount)
+
+assert(eveAppleCount == 4, "Was expecting 4, but got \(eveAppleCount)")
 
 // b. Change the number of apples that Adam  has to 4
 
+applesDict["Adam"] = 4
+
+
 // Your code here
-//assert(applesDict["Adam"] == 4, "Was expecting 4, but got \(String(describing: applesDict["Adam"]))")
+assert(applesDict["Adam"] == 4, "Was expecting 4, but got \(String(describing: applesDict["Adam"]))")
+print("\(applesDict["Adam"] ?? 0)")
+
 
 // c. Set calAndDanAppleCount equal to the sum of both of those
 
-let calAndDanAppleCount = /*Your code here (Replace -1 with your solution)*/ -1
-//assert(calAndDanAppleCount == 8, "Was expecting 8, but got \(calAndDanAppleCount)")
+var calApplCount: Int = applesDict["Cal"] ?? 0
+var danApplCount: Int = applesDict["Dan"] ?? 0
+
+let calAndDanAppleCount = calApplCount + danApplCount
+assert(calAndDanAppleCount == 8, "Was expecting 8, but got \(calAndDanAppleCount)")
+
+print(calAndDanAppleCount)
 
 // d. Set all the values in applesDict to 0
 
-// Your code here
 
-//for (_, value) in applesDict {
-//    assert(value == 0, "Was expecting 0, but got \(value)")
-//}
+// Your code here
+var value = applesDict[""]
+
+
+for (all,_) in applesDict {
+    
+   applesDict.updateValue(0, forKey: all)
+    
+    
+        
+    assert(value == 0, "Was expecting 0, but got" )
+
+}
+    
+print(applesDict)
+
+
+
 
 // Question Two
 
